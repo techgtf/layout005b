@@ -1,0 +1,11 @@
+::-webkit-scrollbar {width: 2px;height: 8px;transition: all 0.9s ease;}
+::-webkit-scrollbar:hover {width: 8px;}
+::-webkit-scrollbar-track {background: #f1f1f1;}
+::-webkit-scrollbar-thumb {background: #888;}
+::-webkit-scrollbar-thumb:hover {background: #555;}
+body,p,h1,h2,h3,h4,h5,h6,ul,li {margin: 0px;padding: 0;font-size: inherit;}
+p {line-height: 27px;}
+* {text-decoration: none;outline: none;border: 0;font-family: "popins";list-style: none;letter-spacing: 0.4px;}
+button:focus {outline: 0;box-shadow: none !important;}
+a:hover {text-decoration: none;outline: none;color: inherit;}
+button, select, [data-toggle="modal"]{cursor: pointer;}
