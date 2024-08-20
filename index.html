@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="">
     <link rel="stylesheet" href="css/bootstrap.min.css">     
     <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/commonStyles.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -42,178 +43,236 @@
 
     <!---------------- Slider Section Codes Start From Here --------------->
     <section class="container-fluid banner-section p-0 position-relative">
-        <div id="carouselHome" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="images/slider-banner/banner1.jpg" class="d-block w-100" alt="project banner images">
-                <!-- <img src="images/slider-banner/banner1-sm.jpg" class="d-block w-100 lg-d-none d-block" alt="project banner images"> -->
+
+        <!-- kindly use desktop image 1920x857 and for mobile 582x380-->
+        <div class="swiper bannerSlider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/slider-banner/banner1.webp" class="slideImg d-lg-block d-none w-100" alt="project banner images">
+                <img src="images/slider-banner/banner1-sm.webp" class="slideImg d-lg-none d-block w-100" alt="project banner images">  
               </div>
-              <div class="carousel-item">
-                <img src="images/slider-banner/banner2.jpg" class="d-block w-100" alt="project banner images">
-                <!-- <img src="images/slider-banner/banner2-sm.jpg" class="d-block w-100 lg-d-none d-block" alt="project banner images"> -->
-              </div>            
+              <div class="swiper-slide">
+                <img src="images/slider-banner/banner2.webp" class="slideImg d-lg-block d-none w-100" alt="project banner images">
+                <img src="images/slider-banner/banner2-sm.webp" class="slideImg d-lg-none d-block w-100" alt="project banner images">  
+              </div>
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div> 
+            <div class="swiper-pagination"></div>-->
+            <div class="autoplay-progress">
+              <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="20"></circle>
+              </svg>
+              <span></span>
             </div>
         </div>
-        <div class="banner-grid-div">
-            <div class="content-over-banner container">
-                <div class="contentdiv">
-                    <h1 class="projectname headingsFont">Demo Project</h1>
-                    <span class="address">Noida Sector 105</span>
-                    <h2 class="typology">3 & 4 BHK Apartments</h2>
-                    <h2 class="price headingsFont">
-                        <span>Start At : </span> <p>75 Lacs*</p>
-                    </h2>
+
+        <div class="banner-grid-div container">
+            <div class="contentWrapper">
+                <div class="patternTop">
+                    <span class="commonRectangle"></span>
+                    <span class="commonRectangle commonRectangle-sm"></span>
+                </div>
+                         
+                <div class="content-over-banner">
+                    <div class="contentdiv">
+                        <span class="address ">Noida Sector 105</span>
+                        <h1 class="projectname headingsFont">Demo Project</h1>
+                        <h2 class="typology">3 & 4 BHK Apartments</h2>
+                        <h2 class="price headingsFont">
+                            <span>Start At : </span> <p>75 Lacs*</p>                        
+                        </h2>
+                    </div>
+                    <div class="key_highlights">
+                       <div class="innerdiv row">
+                        <div class="boxes col-md-6">
+                            <span class="headings headingsFont"><img src="images/icons/arrowUp.png" alt=""> Status : under construction</span>                        
+                        </div>
+                        <div class="boxes col-md-6">
+                            <span class="headings headingsFont"> <img src="images/icons/arrowUp.png" alt=""> Total Area : 1800 - 2000 Sq.Ft</span>
+                        </div>
+                        <div class="boxes col-md-6">
+                            <span class="headings headingsFont"><img src="images/icons/arrowUp.png" alt=""> Total Towers : 09 </span>      
+                        </div>
+                        <div class="boxes col-md-6">
+                            <span class="headings headingsFont"><img src="images/icons/arrowUp.png" alt=""> possession : Jun 2025</span>
+                        </div>
+                       </div>
+                    </div>
+
+                    <div class="book-visit-btn">
+                        <button class="siteBtn headingsFont" data-bs-toggle="modal" data-bs-target="#customModal"> <span class="btnText">Book A Site Visit !</span> </button>
+                    </div>    
+                    
                 </div>
                 
-                <div class="key_highlights">
-                   <div class="innerdiv row">
-                    <div class="boxes col-md-3">
-                        <span class="headings headingsFont">Status</span>
-                        <p class="sub_heading">under construction</p>
+                <div class="patternbottom">
+                    <div class="div_in">
+                        <span class="commonRectangle commonRectangle-sm"></span>
+                        <span class="commonRectangle commonRectangle-lg"></span>
                     </div>
-                    <div class="boxes col-md-3">
-                        <span class="headings headingsFont">Total Area</span>
-                        <p class="sub_heading">1800 - 2000 Sq.Ft</p>
-                    </div>
-                    <div class="boxes col-md-3">
-                        <span class="headings headingsFont">Total Towers</span>
-                        <p class="sub_heading">09</p>
-                    </div>
-                    <div class="boxes col-md-3">
-                        <span class="headings headingsFont">possession</span>
-                        <p class="sub_heading">Jun 2025</p>
-                    </div>
-                   </div>
-                </div>
-
-                <div class="banner-form">
-                    <h2 class="heading">Book a Site Visit!</h2>
-                    <div class="flexdiv d-flex flex-wrap justify-content-between mb-2">
-                        <div class="inwrap fullbox position-relative">
-                            <input class="inbox" type="text" id="qSenderName" placeholder="Your Name*">
-                        </div>
-                        <div class="inwrap position-relative">
-                            <input class="inbox" type="text" id="qSenderMobileNo" placeholder="Your Phone No.*">
-                        </div>
-                        <div class="inwrap position-relative">
-                            <input class="inbox" type="text" id="qSenderEmailID" placeholder="Your Email*">
-                        </div>
-                        <div class="inwrap fullbox position-relative">
-                            <input class="inbox" type="text" id="qSenderMessage" placeholder="Your Message*">
-                        </div>
-                        <button class="custombtn" id="SubmitQuery">Submit Now</button>
-                    </div>
-                    <p style="font-weight: 400;color: #000;opacity: 1;font-size:10px;letter-spacing: 0.5px;margin:0;line-height:15px; margin-bottom: 15px;"><input type="checkbox" onclick="return false" checked=""> I authorize company representatives to Call, SMS, Email or WhatsApp me about its products and offers. This consent overrides any registration for DNC/NDNC.</p>
-                </div>                
-            </div>
+                    <span class="commonRectangle"></span>
+                </div> 
+            </div>            
         </div>
-        <div class="carausel_btn">
-            <button class="carousel-control-prev" style="position: unset;" type="button" data-bs-target="#carouselHome" data-bs-slide="prev"></button>
-            <button class="carousel-control-next" style="position: unset;" type="button" data-bs-target="#carouselHome" data-bs-slide="next"></button>
-        </div>
+        
+        <!-- span for bottom_gradient -->
+         <!-- <span class="bottom_gradient"></span> -->
     </section>
+
+    <div class="banner_form">
+        <div class="inner_form_div">
+            <div class="closeForm" onclick="CloseForm()">&#x292B;</div>
+            <!-- <h2 class="commonHeading commonHeadingCenter text-center">Book a Site Visit! </h2> -->
+            <h2 class="commonHeading commonHeadingCenter text-center">Request Callback! </h2>
+            <div class="flexdiv d-flex flex-wrap justify-content-between mb-2">
+                <div class="inwrap fullbox">
+                    <input type="text" id="qSenderName" class="inbox" required />
+                    <span class="place_holder">Your Name*</span>
+                </div>
+                <div class="inwrap">
+                    <input type="text" id="qSenderMobileNo" class="inbox" required />
+                    <span class="place_holder">Your Phone No.*</span>
+                </div>                        
+                <div class="inwrap">
+                    <input type="text" id="qSenderEmailID" class="inbox" required />
+                    <span class="place_holder">Your Email*</span>                            
+                </div>
+                <div class="inwrap fullbox">
+                    <input type="text" id="qSenderMessage" class="inbox" required />
+                    <span class="place_holder">Message*</span>
+                </div>                        
+                <button class="custombtn" id="SubmitQuery">Submit Now</button>
+            </div>
+            <p style="font-weight: 400;color: var(--white);opacity: 1;font-size:10px;letter-spacing: 0.5px;margin:0;line-height:15px; margin-bottom: 15px;"><input type="checkbox" onclick="return false" checked=""> I authorize company representatives to Call, SMS, Email or WhatsApp me about its products and offers. This consent overrides any registration for DNC/NDNC.</p>
+            </div>
+    </div>
+
+    <div class="fixedFormIcon gradient-background" onclick="OpenForm()">
+        <span class="iconImg">
+            <small class="d-block">Request</small>
+            <img src="images/icons/call.svg" alt="">
+            <small class="d-block">Callback</small>
+        </span>
+    </div>
     <!---------------- Slider Section Codes End From Here --------------->
 
- 
-
     <!---------------- Overview Section Codes Start From Here --------------->
-    <section class="container-fluid overview-container page-animation" id="overview">
-        <div class="container">            
-            <div class="col-md-8 col-div">
-                <div class="headings-div">
-                    <p class="commonTitle">overview</p>
-                    <h3 class="commonHeading headingsFont">Luxury 3 & 4 BHK Apartments</h3>                        
+    <section class="container-fluid overview-and-highlights sectionOverlay" id="overview">
+        <div class="container">
+            <div class="row flex_div">
+                <div class="overview_side col-md-6">
+                    <div class="over_inner">
+                        <img class="over-img" src="images/overview/overview.jpg" alt="overview img">
+                        <div class="content-div p-lg-4 p-3">
+                            <p class="commonTitle">Overview</p>
+                            <h3 class="commonHeading headingsFont mb-lg-4 mb-2">Demo Realty</h3>
+                            <article class="mb-lg-4 mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni debitis sed explicabo omnis veniam pariatur, neque nisi sint voluptates consequatur sunt obcaecati? Ullam vitae quasi, excepturi autem veritatis asperiores fuga.</article>
+                            <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni debitis sed explicabo omnis veniam pariatur, neque nisi sint voluptates consequatur sunt obcaecati? Ullam vitae quasi, excepturi autem veritatis asperiores fuga.</article>
+                        </div>
+                    </div>
                 </div>
-                <article>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga est temporibus magni aspernatur ratione libero delectus ipsum. Blanditiis, assumenda corrupti. Dicta deleniti id amet, aliquid nesciunt alias laborum error neque!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga est temporibus magni aspernatur ratione libero delectus ipsum. Blanditiis, assumenda corrupti. Dicta deleniti id amet, aliquid nesciunt alias laborum error neque!
-                </article>
-                <article>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur cumque commodi deserunt voluptatem nisi. Inventore, consequuntur quam. Reprehenderit quibusdam eos aperiam delectus minus, adipisci, veritatis nisi iure quisquam amet hic!
-                </article>
-                <button class="downloadbtn siteBtn" data-bs-target="#customModal" data-bs-toggle="modal">Download Brochure <img src="images/icons/download.png" alt="d"> </button>
-            </div>   
-            <img class="fiexedimgae" src="images/overview/overview.jpg" alt="">             
+                <div class="highlight_side col-md-6">
+                    <h3 class="commonHeading headingsFont mb-lg-4 mb-2">Our Highlights</h3>
+                    <div class="flex_card d-flex align-items-center">
+                        <span class="icon"><img src="images/icons/right.png" alt=""></span>
+                        <p class="text">Strategically located in a well-connected area with easy access to major roads</p>
+                    </div>
+                    <div class="flex_card d-flex align-items-center">
+                        <span class="icon"><img src="images/icons/right.png" alt=""></span>
+                        <p class="text">Strategically located in a well-connected area with easy access to major roads</p>
+                    </div>
+                    <div class="flex_card d-flex align-items-center">
+                        <span class="icon"><img src="images/icons/right.png" alt=""></span>
+                        <p class="text">Strategically located in a well-connected area with easy access to major roads</p>
+                    </div>
+                    <div class="flex_card d-flex align-items-center">
+                        <span class="icon"><img src="images/icons/right.png" alt=""></span>
+                        <p class="text">Strategically located in a well-connected area with easy access to major roads</p>
+                    </div>
+                    <div class="flex_card d-flex align-items-center">
+                        <span class="icon"><img src="images/icons/right.png" alt=""></span>
+                        <p class="text">Strategically located in a well-connected area with easy access to major roads</p>
+                    </div>
+                </div>                
+            </div>
+            <div class=""></div>
         </div>
     </section>
     <!---------------- Overview Section Codes End From Here --------------->
 
-    <!---------------- Highlights Section Codes Start From Here --------------->
-    <section class="container-fluid highlights-contaier" id="highlights"> 
+    
+    <div class="inquireSection">
+        <div class="leftInq" style="width: 50%;"></div>
         <div class="container">
-           <div class="flexdiv d-flex flex-wrap">
-            <div class="leftImg col-md-6">
-                <img class="imgmain" src="images/highlight.jpg" alt="">
-                <span class="playbtn" data-bs-toggle="modal" data-bs-target="#customModal"><img src="images/icons/play.svg" alt=""></span>
-            </div>
-            <div class="rightcontent col-md-6">
-                <div class="headings-div">
-                    <p class="commonTitle">Highlights</p>
-                    <h3 class="commonHeading headingsFont">Demo Realty</h3>
-                    <ul class="points">
-                        <li>Expressway Facing Apartments</li>
-                        <li>Grand Royal Luxurious Project</li>
-                        <li>4 Apartments Per Floor</li>
-                        <li>Pay More & Save More On EOI</li>
-                        <li>NCR's First Ever European Theme Project</li>
-                        <li>Additional Discounts Upto 15 Lacs On Premium EOI's*</li>
-                    </ul>
+            <div class="row justify-content-between align-items-center">
+                <div class="text cols headingsFont">Availability</div>
+                <div class="cols midcol">
+                    <div class="icon-box-title" data-bs-target="#customModal" data-bs-toggle="modal">
+                        <img src="images/icons/message.svg" alt="">
+                        <a href="JavaScrript:void(0)">Inquire </a>
+                    </div>
                 </div>
+                <div class="text cols headingsFont">Residences</div>
             </div>
-           </div>
         </div>
-    </section>
-    <!---------------- Highlights Section Codes End From Here --------------->
+        <div class="rightInq"></div>
+    </div>
+    
 
     <!---------------- Amenities Section Codes Start From Here --------------->
-    <section class="container-fluid amenities-container page-animation" id="amenities">
+    <section class="container-fluid amenities-container sectionOverlay" id="amenities">
         <div class="container">
-            <div class="headings-div">
-                <p class="commonTitle">AMENITIES</p>
-                <h3 class="commonHeading headingsFont" style="color: var(--white);">Top-Tier Amenities Unveiled</h3>                        
-            </div>
-            <div class="grid-div">
-                <div class="am-box">
-                    <!-- use only 64px icons -->
-                    <img class="am-icon" src="images/amenities/dumbbell.png" alt="amenities">
-                    <span class="span">Fitness Center</span>
-                </div>  
-                <div class="am-box">
-                    <img class="am-icon" src="images/amenities/dumbbell.png" alt="amenities">
-                    <span class="span">Swimming Pool</span>
-                </div>  
-                <div class="am-box">
-                    <img class="am-icon" src="images/amenities/spa.png" alt="amenities">
-                    <span class="span">Spa & Wellness</span>
-                </div>  
-                <div class="am-box">
-                    <img class="am-icon" src="images/amenities/guard.png" alt="amenities">
-                    <span class="span">24x7 Security</span>
-                </div>  
-                <div class="am-box">
-                    <img class="am-icon" src="images/amenities/parking.png" alt="amenities">
-                    <span class="span">Car Parking</span>
-                </div>  
-                <div class="am-box">
-                    <img class="am-icon" src="images/amenities/internet.png" alt="amenities">
-                    <span class="span">High-Speed Internet</span>
-                </div>  
-                <div class="am-box">
-                    <img class="am-icon" src="images/amenities/run.png" alt="amenities">
-                    <span class="span">jogging track</span>
-                </div>  
-                <div class="am-box">
-                    <img class="am-icon" src="images/amenities/gams.png" alt="amenities">
-                    <span class="span">indoor games</span>
-                </div>  
-                <div class="am-box">
-                    <img class="am-icon" src="images/amenities/cricket.png" alt="amenities">
-                    <span class="span">cricket ground</span>
-                </div>  
-                <div class="am-box">
-                    <img class="am-icon" src="images/amenities/library.png" alt="amenities">
-                    <span class="span">library</span>
-                </div>  
+            <div class="row justify-content-between">
+                <div class="contentSide col-md-4">
+                    <div class="commonTitle">Amenities</div>
+                    <!-- <div class="commonHeading">Top-Tier Amenities Unveiled</div> -->
+                    <div class="commonHeading headingsFont">Experience Modern Living with Unmatched Convenience and Security</div>
+                    <p class="desc">Where modern living meets convenience. Enjoy 24x7 security, high-speed Wi-Fi, and state-of-the-art lifts for easy access. Our reception staff is always ready to assist, with CCTV surveillance ensuring added protection. Convenient parking completes the package.</p>
+                    <img src="images/amenities/h1_img-4.jpg" alt="">
+                    <button class="siteBtn" data-bs-toggle="modal" data-bs-target="#customModal"> <span class="btnText">Interested</span></button>
+                </div>
+                <div class="col-md-6 am_scroll_section">
+                    <div class="boxes">
+                        <div class="box_inner">
+                            <h3 class="am_name">The Golf Course</h3>
+                            <div class="imgBox">
+                                <img src="images/amenities/golf.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="box_inner">
+                            <h3 class="am_name">The Pet Park</h3>
+                            <div class="imgBox">
+                                <img src="images/amenities/pet-park.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="box_inner">
+                            <h3 class="am_name">The Fitness Center</h3>
+                            <div class="imgBox">
+                                <img src="images/amenities/gym.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="box_inner">
+                            <h3 class="am_name">Game Room & Residents' Lounge</h3>
+                            <div class="imgBox">
+                                <img src="images/amenities/games.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="box_inner">
+                            <h3 class="am_name">Children’s Play Areas</h3>
+                            <div class="imgBox">
+                                <img src="images/amenities/kids-area.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="box_inner">
+                            <h3 class="am_name">Yoga</h3>
+                            <div class="imgBox">
+                                <img src="images/amenities/yoga.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -224,40 +283,58 @@
           <div class="container">
             <div class="headings-div">
                 <p class="commonTitle">PRICING</p>
-                <h3 class="commonHeading headingsFont">Step into Affordable Elegance</h3>                        
+                <h3 class="commonHeading commonHeadingCenter headingsFont">Check our Pricing</h3>                        
             </div>
             <div class="flexpricing d-flex flex-wrap">
                 <div class="pricebox col-lg-4 col-12">
                     <div class="innerbox">
-                        <div class="price-head">
-                            <h5 class="title">2 BHK</h5>
-                            <span class="typo">Apartments</span>
+                        <div class="flexcommon">
+                            <span class="text-left headingsFont">Typology</span>
+                            <span class="text-right">2 BHK Apartment</span>
                         </div>
-                        <div class="price"> <span class="sup">₹</span> 75 <span class="pricetype">Lacs*</span> <small>Onwards</small> </div>
-                        <p class="area">total area : 1200 Sq.Ft</p>
-                        <button class="siteBtn" data-bs-toggle="modal" data-bs-target="#customModal">Know more</button>
+                        <div class="flexcommon">
+                            <span class="text-left headingsFont">Total area</span>
+                            <span class="text-right">2800 sqft</span>
+                        </div>
+                        <div class="flexcommon">
+                            <span class="text-left headingsFont">Starting Price</span>
+                            <span class="text-right">78 Lacs*</span>
+                        </div>
+                        <button class="siteBtn" data-bs-toggle="modal" data-bs-target="#customModal"> <span class="btnText">Interested</span></button>
                     </div>
                 </div>
                 <div class="pricebox col-lg-4 col-12">
                     <div class="innerbox">
-                        <div class="price-head">
-                            <h5 class="title">3 BHK</h5>
-                            <span class="typo">Apartments</span>
+                        <div class="flexcommon">
+                            <span class="text-left headingsFont">Typology</span>
+                            <span class="text-right">3 BHK Apartment</span>
                         </div>
-                        <div class="price"> <span class="sup">₹</span> 95 <span class="pricetype">Lacs*</span> <small>Onwards</small> </div>
-                        <p class="area">total area : 1200 Sq.Ft</p>
-                        <button class="siteBtn" data-bs-toggle="modal" data-bs-target="#customModal">Know more</button>
+                        <div class="flexcommon">
+                            <span class="text-left headingsFont">Total area</span>
+                            <span class="text-right">1800 sqft</span>
+                        </div>
+                        <div class="flexcommon">
+                            <span class="text-left headingsFont">Starting Price</span>
+                            <span class="text-right">2 Cr*</span>
+                        </div>
+                        <button class="siteBtn" data-bs-toggle="modal" data-bs-target="#customModal"> <span class="btnText">Interested</span></button>
                     </div>
                 </div>
                 <div class="pricebox col-lg-4 col-12">
                     <div class="innerbox">
-                        <div class="price-head">
-                            <h5 class="title">4 BHK</h5>
-                            <span class="typo">Apartments</span>
+                        <div class="flexcommon">
+                            <span class="text-left headingsFont">Typology</span>
+                            <span class="text-right">4 BHK Apartment</span>
                         </div>
-                        <div class="price"> <span class="sup">₹</span> 2.02 <span class="pricetype">cr*</span> <small>Onwards</small> </div>
-                        <p class="area">total area : 1200 Sq.Ft</p>
-                        <button class="siteBtn" data-bs-toggle="modal" data-bs-target="#customModal">Know more</button>
+                        <div class="flexcommon">
+                            <span class="text-left headingsFont">Total area</span>
+                            <span class="text-right">2800 sqft</span>
+                        </div>
+                        <div class="flexcommon">
+                            <span class="text-left headingsFont">Starting Price</span>
+                            <span class="text-right">4 Cr*</span>
+                        </div>
+                        <button class="siteBtn" data-bs-toggle="modal" data-bs-target="#customModal"> <span class="btnText">Interested</span></button>
                     </div>
                 </div>
             </div>
@@ -269,34 +346,67 @@
      <section class="container-fluid floorplan-container" id="floor-plan">
         <div class="container">
             <div class="headings-div">
-                <p class="commonTitle">FLOOR PLAN</p>
-                <h3 class="commonHeading headingsFont">Spacious 2, 3 & 4 BHK Family Haven</h3>                        
+                <p class="commonTitle">APARTMENT AVAILABITY</p>
+                <h3 class="commonHeading commonHeadingCenter headingsFont">Spacious design smart layouts</h3>                        
             </div>
-            <div class="floorplanflex d-flex d-none flex-wrap justify-content-center">
-                <div class="col-lg-4 col-6 planbox">
+            <ul class="d-flex align-items-center nav-pills gap-3 justify-content-center mb-4" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="fplan1" data-bs-toggle="pill" data-bs-target="#pillsPlan1" type="button" role="tab" aria-controls="pillsPlan1" aria-selected="true">Master Plan</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="fplan2" data-bs-toggle="pill" data-bs-target="#pillsPlan2" type="button" role="tab" aria-controls="pillsPlan2" aria-selected="false">2 BHK</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="fplan3" data-bs-toggle="pill" data-bs-target="#pillsPlan3" type="button" role="tab" aria-controls="pillsPlan2" aria-selected="false">3 BHK</button>
+                </li>
+            </ul>
+            <div class="floorplanflex d-flex flex-wrap justify-content-center tab-content position-relative">
+                <div class="patternTop">
+                    <span class="commonRectangle commonRectangle-sm"></span>
+                    <span class="commonRectangle"></span>
+                </div>
+                <!-- master plan -->
+                <div class="planbox tab-pane fade show active" id="pillsPlan1" role="tabpanel" aria-labelledby="fplan1" tabindex="0">
                     <div class="innercol">
                         <a href="images/f-plans/f-plan.webp" class="without-caption image-source-link">
                             <img src="images/f-plans/plan-sm.jpg" alt="">
                         </a>
-                        <div class="plantype">2 BHK Apartments</div>
+                        <div class="flexbtns d-flex justify-content-between mt-5">
+                            <button class="siteBtn" data-bs-toggle="modal" data-bs-target="#customModal"> <span class="btnText">download plan <img src="images/icons/download.png" style="filter: saturate(0.5) brightness(0.2);" alt=""> </span></button>
+                            <button class="siteBtn siteBtn1" data-bs-toggle="modal" data-bs-target="#customModal"> <span class="btnText">schedule a tour <img src="images/icons/arrow.svg" alt=""> </span></button>
+                        </div>
+                    </div>           
+                </div>
+                <!-- floor plan -->
+                <div class="planbox tab-pane fade" id="pillsPlan2" role="tabpanel" aria-labelledby="fplan2" tabindex="0">
+                    <div class="innercol">
+                        <a href="images/f-plans/f-plan.webp" class="without-caption image-source-link">
+                            <img src="images/f-plans/plan-sm1.jpg" alt="">
+                        </a>
+                        <div class="flexbtns d-flex justify-content-between mt-5">
+                            <button class="siteBtn" data-bs-toggle="modal" data-bs-target="#customModal"> <span class="btnText">download plan <img src="images/icons/download.png" style="filter: saturate(0.5) brightness(0.2);" alt=""> </span></button>
+                            <button class="siteBtn siteBtn1" data-bs-toggle="modal" data-bs-target="#customModal"> <span class="btnText">schedule a tour <img src="images/icons/arrow.svg" alt=""> </span></button>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-6 planbox">
+                <div class="planbox tab-pane fade" id="pillsPlan3" role="tabpanel" aria-labelledby="fplan3" tabindex="0">
                     <div class="innercol">
                         <a href="images/f-plans/f-plan.webp" class="without-caption image-source-link">
                             <img src="images/f-plans/plan-sm.jpg" alt="">
                         </a>
-                        <div class="plantype">3 BHK Apartments</div>
+                        <div class="flexbtns d-flex justify-content-between mt-5">
+                            <button class="siteBtn" data-bs-toggle="modal" data-bs-target="#customModal"> <span class="btnText">download plan <img src="images/icons/download.png" style="filter: saturate(0.5) brightness(0.2);" alt=""> </span></button>
+                            <button class="siteBtn siteBtn1" data-bs-toggle="modal" data-bs-target="#customModal"> <span class="btnText">schedule a tour <img src="images/icons/arrow.svg" alt=""> </span></button>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-6 planbox">
-                    <div class="innercol">
-                        <a href="images/f-plans/f-plan.webp" class="without-caption image-source-link">
-                            <img src="images/f-plans/plan-sm.jpg" alt="">
-                        </a>
-                        <div class="plantype">4 BHK Apartments</div>
+                <div class="patternbottom">
+                    <div class="div_in">
+                        <span class="commonRectangle commonRectangle-sm"></span>
+                        <span class="commonRectangle commonRectangle-lg"></span>
                     </div>
-                </div>
+                    <span class="commonRectangle"></span>
+                </div> 
             </div>
         </div>
      </section>
@@ -308,102 +418,61 @@
                 <p class="commonTitle">Location Advantage</p>
                 <h3 class="commonHeading headingsFont">Prime Location Boosts Connectivity</h3>                        
             </div>
-            
-            <div class="maplist d-flex flex-wrap w-100 align-items-center justify-content-center">
-                <ul class="col-md-4 listng_ul">
-                    <!-- if don't have min and hour in location advantage use 01, 02 - n,  -->
-                    <li class="lsit_li list_left text-capitalize"> <b class="d-block" style="color: var(--secondary);">2 Mins</b>from kanjurmarg Metro Station</li>
-                    <li class="lsit_li list_left text-capitalize"> <b class="d-block" style="color: var(--secondary);">2 Mins</b>from kanjurmarg Metro Station</li>
-                    <li class="lsit_li list_left text-capitalize"> <b class="d-block" style="color: var(--secondary);">2 Mins</b>from kanjurmarg Metro Station</li>                    
-                    <li class="lsit_li list_left text-capitalize"> <b class="d-block" style="color: var(--secondary);">2 Mins</b>from kanjurmarg Metro Station</li>                    
-                </ul>
-                <div class="imgdiv col-md-4 text-center">
-                    <a href="images/map.webp" class="with-caption image-link" title="Location Map">
-                        <img src="images/icons/map.svg" alt="">
-                        <span class="d-block btn">Click To View - Map</span>
-                    </a>
-                </div>
-                <ul class="col-md-4 listng_ul">
-                    <!-- if don't have min and hour in location advantage use 01, 02 - n,  -->
-                    <li class="lsit_li list_right text-capitalize"> <b class="d-block" style="color: var(--secondary);">2 Mins</b>from kanjurmarg Metro Station</li>
-                    <li class="lsit_li list_right text-capitalize"> <b class="d-block" style="color: var(--secondary);">2 Mins</b>from kanjurmarg Metro Station</li>
-                    <li class="lsit_li list_right text-capitalize"> <b class="d-block" style="color: var(--secondary);">2 Mins</b>from kanjurmarg Metro Station</li>                    
-                    <li class="lsit_li list_right text-capitalize"> <b class="d-block" style="color: var(--secondary);">2 Mins</b>from kanjurmarg Metro Station</li>                    
-                </ul>
-            </div>
+                        
         </div>
      </section>
      <!---------------- location Section Codes End From Here --------------->  
 
     <!---------------- Gallery Section Codes Start From Here --------------->
-    <section class="container-fluid gallery-container" id="gallery">
+    <section class="container-fluid gallery-container sectionOverlay" id="gallery">
         <div class="container">
-            <div class="headings-div">
-                <p class="commonTitle">GALLERY</p>
-                <h3 class="commonHeading headingsFont">Premier Property Collection</h3>                        
-            </div>            
-        </div>
-        <div class="gallery-items popup-gallery">
-            <div class="flexdiv d-flex flex-wrap" style="align-items: flex-end;">
-                <div class="imgdiv">
-                    <a href="images/gallery/g1.webp" title="gallery images">
-                        <img src="images/gallery/g1-sm.webp"/>
-                    </a>
+            <div class="flexdiv row justify-content-between">
+                <div class="gallery-items col-md-6 popup-gallery">
+                    <div class="flexdiv-images d-flex" style="align-items: flex-end;">
+                        <div class="imgdiv">
+                            <a href="images/gallery/g1.webp" class="imgZoom" title="gallery images">
+                                <img src="images/gallery/g1.webp"/>
+                            </a>
+                            <div class="el_name">elevation 1</div>
+                        </div>
+                        <div class="imgdiv">
+                            <a href="images/gallery/g2.webp" class="imgZoom" title="gallery images">
+                                <img src="images/gallery/g2.webp"/>
+                            </a>
+                            <div class="el_name">elevation 2</div>
+                        </div>
+                        <div class="imgdiv">
+                            <a href="images/gallery/g3.webp" class="imgZoom" title="gallery images">
+                                <img src="images/gallery/g3.webp"/>
+                            </a>
+                            <div class="el_name">elevation 3</div>
+                        </div>
+                        <div class="imgdiv">
+                            <a href="images/gallery/g4.webp" class="imgZoom" title="gallery images">
+                                <img src="images/gallery/g4.webp"/>
+                            </a>
+                            <div class="el_name">elevation 4</div>
+                        </div>
+                        <div class="imgdiv">
+                            <a href="images/gallery/g5.webp" class="imgZoom" title="gallery images">
+                                <img src="images/gallery/g5.webp"/>
+                            </a>
+                            <div class="el_name">elevation 5</div>
+                        </div>
+                    </div>           
                 </div>
-                <div class="imgdiv smimage">
-                    <a href="images/gallery/g2.webp" title="gallery images">
-                        <img src="images/gallery/g2-sm.webp"/>
-                    </a>
-                </div>
-                <div class="imgdiv largeimg">
-                    <a href="images/gallery/g3.webp" title="gallery images">
-                        <img src="images/gallery/g3.webp"/>
-                    </a>
-                </div>
-                <div class="imgdiv smimage">
-                    <a href="images/gallery/g4.webp" title="gallery images">
-                        <img src="images/gallery/g4-sm.webp"/>
-                    </a>
-                </div>
-                <div class="imgdiv">
-                    <a href="images/gallery/g5.webp" title="gallery images">
-                        <img src="images/gallery/g5-sm.webp"/>
-                    </a>
+                <div class="headings-div col-md-4">
+                    <p class="commonTitle">GALLERY</p>
+                    <h3 class="commonHeading headingsFont">Premier Property Collection</h3>
+                    <p>Discover our exclusive gallery. Each image showcases the stunning architecture, modern amenities, and thoughtfully designed interiors that define this exceptional living space. Explore the lush landscapes, spacious rooms, and contemporary finishes that make Typology Apartments the ideal place to call home. Let our gallery give you a visual tour of the lifestyle and luxury that awaits you.</p>
                 </div>
             </div>
-            <div class="flexdiv d-flex flex-wrap" style="align-items: flex-start;">
-                <div class="imgdiv">
-                    <a href="images/gallery/g6.webp" title="gallery images">
-                        <img src="images/gallery/g6-sm.webp"/>
-                    </a>
-                </div>
-                <div class="imgdiv smimage">
-                    <a href="images/gallery/g7.webp" title="gallery images">
-                        <img src="images/gallery/g7-sm.webp"/>
-                    </a>
-                </div>
-                <div class="imgdiv largeimg">
-                    <a href="images/gallery/g8.webp" title="gallery images">
-                        <img src="images/gallery/g8-sm.webp"/>
-                    </a>
-                </div>
-                <div class="imgdiv smimage">
-                    <a href="images/gallery/g9.webp" title="gallery images">
-                        <img src="images/gallery/g9-sm.webp"/>
-                    </a>
-                </div>
-                <div class="imgdiv">
-                    <a href="images/gallery/g10.webp" title="gallery images">
-                        <img src="images/gallery/g10-sm.webp"/>
-                    </a>
-                </div>
-            </div>                
         </div>
     </section>
     <!---------------- Gallery Section Codes End From Here --------------->
 
     <!---------------- Contact Section Codes Start From Here --------------->
-    <section class="container-fluid contact-container" id="contact-us">
+    <section class="container-fluid contact-container d-none" id="contact-us">
         
         <div class="container">            
             <div class="d-flex flex-wrap align-items-center">
@@ -462,16 +531,7 @@
     </footer>
     <!-- .sitefooter end -->
 
-
-    <!-- mobile-section-footer -->    
-    <!-- <div class="mobile-section-footer"> 
-        <a href="" title="Enquire Now" data-bs-toggle="modal" data-bs-target="#customModal"> Enquire Now</a> 
-        <a href="https://api.whatsapp.com/send?phone=+910123456789  &amp;text=Hello, Looking for 3 and 4 BHK APARTMENTS. Get in touch with me my name is"> WhatsApp</a> 
-        <a href="tel:91-0123456789"> Call Now</a>
-    </div> -->
-    <!-- mobile-section-footer -->
-
-    <div class="fixed_icons">
+    <div class="fixed_icons d-none">
         <div class="flexdiv d-flex justify-content-between">
             <a class="btn_in" href="tel:919999999999">
                 <img class="icon" src="images/icons/call.svg" alt="">
@@ -543,6 +603,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script type="text/javascript" language="javascript">
         var versionUpdate = (new Date()).getTime();
@@ -603,6 +664,7 @@
     </script>
     <!--------------------- Images Zooming Plugin  ----------------->
     <script>
+
         $('.without-caption').magnificPopup({
             type: 'image',
             closeOnContentClick: true,
@@ -675,29 +737,59 @@
             })
         })
         
+
+        const progressCircle = document.querySelector(".autoplay-progress svg");
+        const progressContent = document.querySelector(".autoplay-progress span");
+        var swiper = new Swiper(".bannerSlider", {            
+            centeredSlides: true,
+            effect: "fade",
+            autoplay: {
+                delay: 5500,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            on: {
+                autoplayTimeLeft(s, time, progress) {
+                progressCircle.style.setProperty("--progress", 1 - progress);
+                progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+                }
+            }
+        });
+
+        function OpenForm() {
+            $('.banner_form').addClass('active')
+        }
+        function CloseForm() {
+            $('.banner_form').removeClass('active')
+        }
+    
+        $('.popup-gallery').magnificPopup({delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function(item) {
+                    return item.el.attr('title') + ' by Marsel Van Oosten';
+                }
+            }
+        });
+        
         setTimeout(() => {
             // $("#customModal").modal('show')
         }, 5000);
-
-
-        $('.popup-gallery').magnificPopup({
-		delegate: 'a',
-		type: 'image',
-		tLoading: 'Loading image #%curr%...',
-		mainClass: 'mfp-img-mobile',
-		gallery: {
-			enabled: true,
-			navigateByImgClick: true,
-			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-		},
-		image: {
-			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-			titleSrc: function(item) {
-				return item.el.attr('title') + ' by Marsel Van Oosten';
-			}
-		}
-	});
-        
 
     </script>
 
